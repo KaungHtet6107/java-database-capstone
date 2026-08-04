@@ -43,7 +43,12 @@ public class Doctor {
     private String phone;
 
 
-    @ElementCollection
+    @ElementCollection(fetch = FetchType.EAGER)
+    @CollectionTable(
+            name = "doctor_available_times",
+            joinColumns = @JoinColumn(name = "doctor_id")
+    )
+    @Column(name = "available_time")
     private List<String> availableTimes;
 
 
