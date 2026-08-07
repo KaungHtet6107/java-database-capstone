@@ -5,9 +5,20 @@ import { filterDoctors } from './services/doctorServices.js';
 import { bookAppointment } from './services/appointmentRecordService.js';
 
 
-document.addEventListener("DOMContentLoaded", () => {
-  loadDoctorCards();
-});
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
+
+        if(typeof renderContent === "function"){
+
+            renderContent();
+
+        }
+
+        loadDoctorCards();
+
+    }
+);
 
 function loadDoctorCards() {
   getDoctors()
@@ -87,9 +98,36 @@ export function showBookingOverlay(e, doctor, patient) {
 
 
 // Filter Input
-document.getElementById("searchBar").addEventListener("input", filterDoctorsOnChange);
-document.getElementById("filterTime").addEventListener("change", filterDoctorsOnChange);
-document.getElementById("filterSpecialty").addEventListener("change", filterDoctorsOnChange);
+document.addEventListener(
+"DOMContentLoaded",
+()=>{
+
+
+document
+.getElementById("searchBar")
+?.addEventListener(
+"input",
+filterDoctorsOnChange
+);
+
+
+document
+.getElementById("filterTime")
+?.addEventListener(
+"change",
+filterDoctorsOnChange
+);
+
+
+document
+.getElementById("filterSpecialty")
+?.addEventListener(
+"change",
+filterDoctorsOnChange
+);
+
+
+});
 
 
 

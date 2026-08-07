@@ -10,19 +10,19 @@
     <title>Select Role</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="./assets/images/logo/logo.png">
+    <link rel="icon" type="image/png" href="/assets/images/logo/logo.png">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="./assets/css/index.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/index.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
 
     <!-- Common JavaScript -->
-    <script src="./js/util.js" defer></script>
-    <script src="./js/render.js" defer></script>
+    <script src="/js/util.js" defer></script>
+    <script src="/js/render.js" defer></script>
 
     <!-- Components -->
-    <script src="./js/components/header.js" defer></script>
-    <script src="./js/components/footer.js" defer></script>
+    <script src="/js/components/header.js" defer></script>
+    <script src="/js/components/footer.js" defer></script>
 
 </head>
 
@@ -53,22 +53,19 @@
 
                     <button
                             id="adminBtn"
-                            class="role-btn"
-                            onclick="selectRole('ADMIN')">
+                            class="role-btn">
                         Admin
                     </button>
 
                     <button
                             id="doctorBtn"
-                            class="role-btn"
-                            onclick="selectRole('DOCTOR')">
+                            class="role-btn">
                         Doctor
                     </button>
 
                     <button
                             id="patientBtn"
-                            class="role-btn"
-                            onclick="selectRole('PATIENT')">
+                            class="role-btn">
                         Patient
                     </button>
 
@@ -104,8 +101,8 @@
 </div>
 
 <!-- Page Script -->
-<script type="module" src="./js/services/index.js"></script>
-
+<script type="module" src="/js/services/authService.js"></script>
+<script type="module" src="/js/services/index.js"></script>
 </body>
 
 </html>

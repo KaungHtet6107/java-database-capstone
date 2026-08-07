@@ -1,106 +1,271 @@
 <!-- doctorDashboard.html -->
 
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
 
 <head>
+
     <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
 
     <link rel="icon"
           type="image/png"
           th:href="@{/assets/images/logo/logo.png}">
 
-    <title>Doctor Dashboard</title>
+
+    <title>
+        Doctor Dashboard
+    </title>
+
+
+
 
     <!-- CSS -->
-    <link rel="stylesheet" th:href="@{/assets/css/adminDashboard.css}">
-    <link rel="stylesheet" th:href="@{/assets/css/doctorDashboard.css}">
-    <link rel="stylesheet" th:href="@{/assets/css/style.css}">
+
+    <link rel="stylesheet"
+          th:href="@{/assets/css/adminDashboard.css}">
+
+    <link rel="stylesheet"
+          th:href="@{/assets/css/doctorDashboard.css}">
+
+    <link rel="stylesheet"
+          th:href="@{/assets/css/style.css}">
+
+
+
+
+
 
     <!-- Common JavaScript -->
-    <script th:src="@{/js/render.js}" defer></script>
-    <script th:src="@{/js/util.js}" defer></script>
-    <script th:src="@{/js/components/header.js}" defer></script>
-    <script th:src="@{/js/components/footer.js}" defer></script>
 
-    <!-- Doctor Dashboard Script -->
-    <script type="module"
-            th:src="@{/js/doctorDashboard.js}"
+    <script th:src="@{/js/render.js}"
             defer></script>
+
+
+    <script th:src="@{/js/util.js}"
+            defer></script>
+
+
+    <script th:src="@{/js/components/header.js}"
+            defer></script>
+
+
+    <script th:src="@{/js/components/footer.js}"
+            defer></script>
+
+
+
+
+
+    <!-- Doctor Dashboard JavaScript -->
+
+    <script type="module"
+            th:src="@{/js/doctorDashboard.js}">
+    </script>
+
+
 </head>
 
-<body onload="renderContent()">
+
+
+
+<body>
+
 
 <div class="container">
 
+
     <div class="wrapper">
 
-        <!-- Dynamic Header -->
+
+
+        <!-- Header -->
+
         <div id="header"></div>
+
+
+
+
+
+
+        <!-- Main Content -->
 
         <main class="main-content">
 
-            <h2>Doctor Dashboard</h2>
 
-            <!-- Search -->
-            <div class="search-container">
-                <input
-                        type="text"
-                        id="searchBar"
-                        class="searchBar"
-                        placeholder="Search patient..."
-                >
-            </div>
 
-            <!-- Filters -->
-            <div class="filter-container">
+            <section class="dashboard">
 
-                <button
-                        id="todayButton"
-                        class="today-btn">
-                    Today's Appointments
-                </button>
 
-                <input
-                        type="date"
-                        id="datePicker"
-                        class="date-picker"
-                >
 
-            </div>
+                <h2>
+                    Doctor Dashboard
+                </h2>
 
-            <!-- Patient Table -->
-            <div class="table-container">
 
-                <table>
 
-                    <thead>
-                    <tr>
-                        <th>Patient ID</th>
-                        <th>Name</th>
-                        <th>Phone No.</th>
-                        <th>Email</th>
-                        <th>Prescription</th>
-                    </tr>
-                    </thead>
 
-                    <tbody id="patientTableBody">
-                    <!-- JavaScript will insert rows here -->
-                    </tbody>
 
-                </table>
+                <!-- Search -->
 
-            </div>
+                <div class="search-container">
+
+
+                    <input
+
+                            type="text"
+
+                            id="searchBar"
+
+                            class="searchBar"
+
+                            placeholder="Search patient..."
+
+                    >
+
+
+                </div>
+
+
+
+
+
+
+
+
+                <!-- Date Filter -->
+
+                <div class="filter-container">
+
+
+
+                    <button
+
+                            id="todayBtn"
+
+                            class="today-btn">
+
+                        Today's Appointments
+
+                    </button>
+
+
+
+
+
+                    <input
+
+                            type="date"
+
+                            id="datePicker"
+
+                            class="date-picker"
+
+                    >
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+                <!-- Patient Appointment Table -->
+
+
+                <div class="table-container">
+
+
+                    <table>
+
+
+                        <thead>
+
+                        <tr>
+
+                            <th>
+                                Patient ID
+                            </th>
+
+
+                            <th>
+                                Name
+                            </th>
+
+
+                            <th>
+                                Phone No.
+                            </th>
+
+
+                            <th>
+                                Email
+                            </th>
+
+
+                            <th>
+                                Prescription
+                            </th>
+
+
+                        </tr>
+
+                        </thead>
+
+
+
+
+
+                        <tbody id="patientTableBody">
+
+
+                        <!-- Rows generated by JavaScript -->
+
+
+                        </tbody>
+
+
+
+                    </table>
+
+
+                </div>
+
+
+
+            </section>
+
+
 
         </main>
 
-        <!-- Dynamic Footer -->
+
+
+
+
+
+        <!-- Footer -->
+
         <div id="footer"></div>
+
+
+
 
     </div>
 
+
 </div>
 
+
 </body>
+
 
 </html>

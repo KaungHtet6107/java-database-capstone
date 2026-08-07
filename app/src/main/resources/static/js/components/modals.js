@@ -73,29 +73,45 @@ export function openModal(type) {
   }
 
   document.getElementById('modal-body').innerHTML = modalContent;
-  document.getElementById('modal').style.display = 'block';
+    document.getElementById('modal').style.display = 'block';
 
-  document.getElementById('closeModal').onclick = () => {
-    document.getElementById('modal').style.display = 'none';
-  };
 
-  if (type === "patientSignup") {
-    document.getElementById("signupBtn").addEventListener("click", signupPatient);
-  }
+    document.getElementById('closeModal').onclick = () => {
+        document.getElementById('modal').style.display = 'none';
+    };
 
-  if (type === "patientLogin") {
-    document.getElementById("loginBtn").addEventListener("click", loginPatient);
-  }
 
-  if (type === 'addDoctor') {
-    document.getElementById('saveDoctorBtn').addEventListener('click', adminAddDoctor);
-  }
+    if (type === "patientSignup") {
+        document.getElementById("signupBtn")
+            .addEventListener("click", signupPatient);
+    }
 
-  if (type === 'adminLogin') {
-    document.getElementById('adminLoginBtn').addEventListener('click', adminLoginHandler);
-  }
 
-  if (type === 'doctorLogin') {
-    document.getElementById('doctorLoginBtn').addEventListener('click', doctorLoginHandler);
-  }
+    if (type === "patientLogin") {
+        document.getElementById("loginBtn")
+            .addEventListener("click", loginPatient);
+    }
+
+
+    if (type === 'addDoctor') {
+        document.getElementById('saveDoctorBtn')
+            .addEventListener('click', adminAddDoctor);
+    }
+
+
+    if (type === 'adminLogin') {
+        document.getElementById('adminLoginBtn')
+            .addEventListener("click", adminLoginHandler);
+    }
+
+
+    if (type === 'doctorLogin') {
+        document.getElementById('doctorLoginBtn')
+            .addEventListener("click", doctorLoginHandler);
+    }
+
 }
+
+
+// Make function available globally
+window.openModal = openModal;
